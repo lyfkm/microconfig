@@ -8,7 +8,7 @@ spring:
 spring:
   profiles: eurekaServer
   application:
-    name: microcoloud-eureka   #在EUREKA页面中申明服务名称
+    name: microcoloud-eureka
 
 server:
   port: 7001
@@ -22,13 +22,13 @@ security:
 
 eureka:
   #server:
-    #enable-self-preservation: false # 保护模式是否启用
-   # eviction-interval-timer-in-ms: 60000 # 设置服务down服务的清理时间间隔
+    #enable-self-preservation: false
+   # eviction-interval-timer-in-ms: 60000
   client:
     service-url:
       defaultZone: http://edmin:mldnjava@eurekaServer1:7002/eureka,http://edmin:mldnjava@eurekaServer2:7003/eureka
-    register-with-eureka: false # 当前的微服务不注册到eureka服务中
-    fetch-registry: false   # 不通过eureka获得服务的注册信息
+    register-with-eureka: false
+    fetch-registry: false
   instance:
     hostname: eurekaServer
 
@@ -40,7 +40,7 @@ server:
 spring:
   profiles: eurekaServer1
   application:
-    name: microcoloud-eureka1   #在EUREKA页面中申明服务名称
+    name: microcoloud-eureka1
 
 security:
   basic:
@@ -51,13 +51,13 @@ security:
 
 eureka:
   #server:
-   # enable-self-preservation: false # 保护模式是否启用
-    #eviction-interval-timer-in-ms: 60000 # 设置服务down服务的清理时间间隔
+   # enable-self-preservation: false
+    #eviction-interval-timer-in-ms: 60000
   client:
     service-url:
       defaultZone: http://edmin:mldnjava@eurekaServer:7001/eureka,http://edmin:mldnjava@eurekaServer2:7003/eureka
-    register-with-eureka: false # 当前的微服务不注册到eureka服务中
-    fetch-registry: false   # 不通过eureka获得服务的注册信息
+    register-with-eureka: false
+    fetch-registry: false
   instance:
     hostname: eurekaServer1
 
@@ -69,7 +69,7 @@ server:
 spring:
   profiles: eurekaServer2
   application:
-    name: microcoloud-eureka2   #在EUREKA页面中申明服务名称
+    name: microcoloud-eureka2
 
 security:
   basic:
@@ -80,12 +80,12 @@ security:
 
 eureka:
   #server:
-   # enable-self-preservation: false # 保护模式是否启用
-    #eviction-interval-timer-in-ms: 60000 # 设置服务down服务的清理时间间隔
+   # enable-self-preservation: false
+    #eviction-interval-timer-in-ms: 60000
   client:
     service-url:
       defaultZone: http://edmin:mldnjava@eurekaServer:7001/eureka,http://edmin:mldnjava@eurekaServer1:7002/eureka
-    register-with-eureka: false # 当前的微服务不注册到eureka服务中
-    fetch-registry: false   # 不通过eureka获得服务的注册信息
+    register-with-eureka: false
+    fetch-registry: false
   instance:
     hostname: eurekaServer2

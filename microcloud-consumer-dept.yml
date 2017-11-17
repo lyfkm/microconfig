@@ -1,10 +1,34 @@
-server:
-  port: 80
+spring:
+  profiles:
+    active:
+    - dev
+    
+---
 
 spring:
+  profiles: dev
   application:
     name: microcloud-consumer-dept
- 
+
+server:
+  port: 80 
+
+  
+logging:
+  level:
+    microcloud.service: debug
+
+feign:
+  hystrix:
+    enabled: true
+  compression:
+    request:
+      mime-types:
+      - text/xml
+      - application/xml
+      - application/json
+      min-request-size: 2048 # 超过2k的文件压缩
+  
 eureka:
   client:
     register-with-eureka: false

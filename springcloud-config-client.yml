@@ -10,7 +10,7 @@ spring:
   application:
     name: microcloud-config-client
 server:
-  prot: 8201
+  port: 8201
 eureka:
   client:
     service-url:
@@ -23,7 +23,7 @@ spring:
   application: 
     name: microcloud-config-client
 server:
-  prot: 8202
+  port: 8202
 eureka:
   client:
     service-url:

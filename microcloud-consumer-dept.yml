@@ -1,0 +1,12 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: microcloud-consumer-dept
+ 
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://edmin:mldnjava@eurekaServer:7001/eureka,http://edmin:mldnjava@eurekaServer1:7002/eureka,http://edmin:mldnjava@eurekaServer2:7003/eureka

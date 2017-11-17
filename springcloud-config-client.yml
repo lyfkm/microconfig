@@ -9,6 +9,8 @@ spring:
   profiles: dev
   application:
     name: microcloud-config-client
+server:
+  prot: 8201
 eureka:
   client:
     service-url:
@@ -20,6 +22,8 @@ spring:
   profiles: beta
   application: 
     name: microcloud-config-client
+server:
+  prot: 8201
 eureka:
   client:
     service-url:

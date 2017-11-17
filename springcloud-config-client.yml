@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active:
+    - dev
+
+---
+
+spring:
+  profiles: dev
+  application:
+    name: microcloud-config-client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://edmin:mldnjava@eurekaServer:7001/eureka,http://edmin:mldnjava@eurekaServer1:7002/eureka,http://edmin:mldnjava@eurekaServer2:7003/eureka
+
+---
+
+spring:
+  profiles: beta
+  application: 
+    name: microcloud-config-client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://edmin:mldnjava@eurekaServer-beta:7001/eureka,http://edmin:mldnjava@eurekaServer1-beta:7002/eureka,http://edmin:mldnjava@eurekaServer2-beta:7003/eureka

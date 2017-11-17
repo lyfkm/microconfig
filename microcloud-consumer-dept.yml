@@ -27,7 +27,7 @@ feign:
       - text/xml
       - application/xml
       - application/json
-      min-request-size: 2048 # 超过2k的文件压缩
+      min-request-size: 2048
   
 eureka:
   client:

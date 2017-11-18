@@ -1,0 +1,30 @@
+﻿spring:
+  profiles:
+    active:
+    - dev
+
+---
+
+spring:
+  profiles: dev
+  application:
+    name: microcloud-provider-company
+
+server:
+  port: 8010
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://edmin:mldnjava@eurekaServer:7001/eureka,http://edmin:mldnjava@eurekaServer1:7002/eureka,http://edmin:mldnjava@eurekaServer2:7003/eureka
+  instance:
+  #  lease-renewal-interval-in-seconds: 心跳间隔默认值（一般情况不要改）
+  #  lease-expiration-duration-in-seconds: 心跳过期时间（一般情况不要改）
+    instance-id: provider8010
+    prefer-ip-address: true
+    
+info:
+  app.name: microCloud
+  company.name: lyfkm.cn
+  build.artifactId: $project.artifactId$
+  build.version: 1.2.3

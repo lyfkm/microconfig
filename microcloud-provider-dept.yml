@@ -33,7 +33,7 @@ info:
   app.name: microCloud
   company.name: lyfkm.cn
   build.artifactId: $project.artifactId$
-  app.version: dev-1.0.2
+  app.version: dev-1.9.9
       
 eureka:
   client:

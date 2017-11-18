@@ -27,4 +27,4 @@ info:
   app.name: microCloud
   company.name: lyfkm.cn
   build.artifactId: $project.artifactId$
-  app.version: 1.2.3
+  app.version: 6.7.8

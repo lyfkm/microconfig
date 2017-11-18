@@ -33,7 +33,47 @@ info:
   app.name: microCloud
   company.name: lyfkm.cn
   build.artifactId: $project.artifactId$
-  build.version: $project.version$
+  app.version: dev-0.0.1
+      
+eureka:
+  client:
+    service-url:
+      defaultZone: http://edmin:mldnjava@eurekaServer:7001/eureka,http://edmin:mldnjava@eurekaServer1:7002/eureka,http://edmin:mldnjava@eurekaServer2:7003/eureka
+  instance:
+    instance-id: provider8001
+    prefer-ip-address: true
+
+---
+
+spring:
+  profiles: beta
+  application:
+    name: microcloud-provider-dept
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://192.168.174.128:3306/mldn8001?characterEncoding=utf8&useSSL=true
+    username: root
+    password: root123
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+      
+server:
+  port: 8001
+mybatis:
+  config-location: classpath:mybatis/mybatis.config.xml
+  type-aliases-package: microcloud.api.vo
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*
+  
+info:
+  app.name: microCloud
+  company.name: lyfkm.cn
+  build.artifactId: $project.artifactId$
+  app.version: beta-0.0.1
       
 eureka:
   client:

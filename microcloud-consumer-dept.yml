@@ -15,6 +15,12 @@ spring:
   application:
     name: microcloud-consumer-dept
 
+info:
+  app.name: microCloud
+  company.name: lyfkm.cn
+  build.artifactId: $project.artifactId$
+  app.version: dev-7.4
+
 server:
   port: 80 
   

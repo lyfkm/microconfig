@@ -7,12 +7,16 @@ spring:
 
 spring:
   profiles: dev
+  zipkin:
+    base-url: http://zipkin-server:4444
+  sleuth:
+    sampler:
+      percentage 1.0
   application:
     name: microcloud-consumer-dept
 
 server:
   port: 80 
-
   
 logging:
   level:

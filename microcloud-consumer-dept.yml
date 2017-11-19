@@ -11,7 +11,7 @@ spring:
     base-url: http://zipkin-server:4444
   sleuth:
     sampler:
-      percentage 1.0
+      percentage: 1.0
   application:
     name: microcloud-consumer-dept
 

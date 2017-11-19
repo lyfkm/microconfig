@@ -7,8 +7,8 @@ spring:
 
 spring:
   profiles: dev
-  zipkin:
-    base-url: http://sleuth-server:4444
+  #zipkin:
+  #  base-url: http://sleuth-server:4444
   sleuth:
     sampler:
       percentage: 1.0
